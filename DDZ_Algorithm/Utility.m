@@ -9,7 +9,14 @@
 #import "Utility.h"
 
 @implementation Utility
-
+/**
+ *  旋转
+ *
+ *  @param position 旋转位数
+ *  @param arr      需要旋转的数组
+ *
+ *  @return 旋转后数组
+ */
 + (NSArray *)rotationArrayWithRotaionPosition:(int)position Array:(NSArray *)arr{
     NSMutableArray *array = [NSMutableArray arrayWithArray:arr];
     int end = (int)arr.count-1;
