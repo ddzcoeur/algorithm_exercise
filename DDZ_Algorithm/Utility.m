@@ -43,14 +43,14 @@
 }
 
 + (NSString *)rotationWithRotation:(int)i endPosition:(int)end string:(NSString *)str{
-    NSString *f_str = nil;
+    NSMutableString *f_str = [NSMutableString stringWithString:str];
     for (int j = i; j<end; j++) {
         NSRange b_range = NSMakeRange(j,1);
         NSRange e_range = NSMakeRange(end, 1);
-        NSString *b_str = [str substringWithRange:b_range];
-        NSString *e_str = [str substringWithRange:e_range];
-        f_str = [str stringByReplacingCharactersInRange:e_range withString:b_str];
-        f_str = [f_str stringByReplacingCharactersInRange:b_range withString:e_str];
+        NSString *b_str = [f_str substringWithRange:b_range];
+        NSString *e_str = [f_str substringWithRange:e_range];
+        [f_str replaceCharactersInRange:e_range withString:b_str];
+        [f_str replaceCharactersInRange:b_range withString:e_str];
 //        [arr exchangeObjectAtIndex:j withObjectAtIndex:end];
         end--;
     }
