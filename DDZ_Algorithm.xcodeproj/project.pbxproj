@@ -11,6 +11,7 @@
 		470FA50419382E5300980082 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 470FA50319382E5300980082 /* main.m */; };
 		470FA50819382E5300980082 /* DDZ_Algorithm.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 470FA50719382E5300980082 /* DDZ_Algorithm.1 */; };
 		470FA510193830B400980082 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 470FA50F193830B400980082 /* Utility.m */; };
+		47920B9A193E1B1D0057AF6D /* NSString+Pure.m in Sources */ = {isa = PBXBuildFile; fileRef = 47920B99193E1B1D0057AF6D /* NSString+Pure.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		470FA50719382E5300980082 /* DDZ_Algorithm.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DDZ_Algorithm.1; sourceTree = "<group>"; };
 		470FA50E193830B400980082 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		470FA50F193830B400980082 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		47920B98193E1B1D0057AF6D /* NSString+Pure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Pure.h"; sourceTree = "<group>"; };
+		47920B99193E1B1D0057AF6D /* NSString+Pure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Pure.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				470FA50519382E5300980082 /* Supporting Files */,
 				470FA50E193830B400980082 /* Utility.h */,
 				470FA50F193830B400980082 /* Utility.m */,
+				47920B98193E1B1D0057AF6D /* NSString+Pure.h */,
+				47920B99193E1B1D0057AF6D /* NSString+Pure.m */,
 			);
 			path = DDZ_Algorithm;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				470FA510193830B400980082 /* Utility.m in Sources */,
+				47920B9A193E1B1D0057AF6D /* NSString+Pure.m in Sources */,
 				470FA50419382E5300980082 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +265,7 @@
 				470FA50D19382E5300980082 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

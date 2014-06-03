@@ -22,8 +22,9 @@ int main(int argc, const char * argv[])
             NSLog(@"%@ ",[ar_rotation objectAtIndex:i]);
         }
         
-        NSString *str = @"abcdefghi";
-        NSString *f_str = [Utility rotationArrayWithRotaionPosition:4 string:str];
+        NSString *str = @"abcdefghi123";
+        int rotation = [Utility getRotation:str];
+        NSString *f_str = [Utility rotationArrayWithRotaionPosition:rotation string:str];
         NSLog(@"final str:%@",f_str);
     }
     return 0;

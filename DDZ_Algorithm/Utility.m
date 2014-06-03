@@ -8,15 +8,27 @@
 
 #import "Utility.h"
 
+#define DEFAULT_ROTATION 6
+
 @implementation Utility
-/**
- *  旋转
- *
- *  @param position 旋转位数
- *  @param arr      需要旋转的数组
- *
- *  @return 旋转后数组
- */
+
++ (Utility *)sharedInstance{
+    static Utility *_sharedInstance = nil;
+    dispatch_once_t _once;
+    dispatch_once(&_once, ^{
+        _sharedInstance = [[self alloc] init];
+    });
+    return _sharedInstance;
+}
+
+- (id)init{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 + (NSArray *)rotationArrayWithRotaionPosition:(int)position Array:(NSArray *)arr{
     NSMutableArray *array = [NSMutableArray arrayWithArray:arr];
     int end = (int)arr.count-1;
@@ -51,10 +63,29 @@
         NSString *e_str = [f_str substringWithRange:e_range];
         [f_str replaceCharactersInRange:e_range withString:b_str];
         [f_str replaceCharactersInRange:b_range withString:e_str];
-//        [arr exchangeObjectAtIndex:j withObjectAtIndex:end];
         end--;
     }
     return f_str;
 }
+
++ (int)getRotation:(NSString *)string{
+    int rotation = DEFAULT_ROTATION;
+    if (rotation<string.length) {
+        rotation = (int)string.length-1;
+    }
+    for (int i = 0; i<string.length; i++) {
+        NSString *c = [string substringWithRange:NSMakeRange(i, 1)];
+        BOOL isNum = [c isPureInt];
+        if (isNum) {
+            return i;
+        }
+        else{
+            continue;
+        }
+    }
+    return rotation;
+}
+
+
 
 @end
