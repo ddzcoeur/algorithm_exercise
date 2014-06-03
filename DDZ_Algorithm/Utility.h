@@ -20,5 +20,6 @@
  *  @return 旋转后的数组
  */
 + (NSArray *)rotationArrayWithRotaionPosition:(int)position Array:(NSArray *)arr;
++ (NSString *)rotationArrayWithRotaionPosition:(int)position string:(NSString *)str;
 
 @end

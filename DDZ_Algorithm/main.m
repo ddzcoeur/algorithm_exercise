@@ -11,7 +11,6 @@
 
 
 
-
 int main(int argc, const char * argv[])
 {
 
@@ -22,6 +21,10 @@ int main(int argc, const char * argv[])
         for (int i = 0; i<ar_rotation.count; i++) {
             NSLog(@"%@ ",[ar_rotation objectAtIndex:i]);
         }
+        
+        NSString *str = @"abcdefghi";
+        NSString *f_str = [Utility rotationArrayWithRotaionPosition:4 string:str];
+        NSLog(@"final str:%@",f_str);
     }
     return 0;
 }
