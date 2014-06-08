@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Utility.h"
+#import "Chess.h"
 
 
 
@@ -26,6 +27,7 @@ int main(int argc, const char * argv[])
         int rotation = [Utility getRotation:str];
         NSString *f_str = [Utility rotationArrayWithRotaionPosition:rotation string:str];
         NSLog(@"final str:%@",f_str);
+        [Chess chess];
     }
     return 0;
 }
