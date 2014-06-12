@@ -19,7 +19,8 @@
 
 + (void)startSort:(NSMutableArray *)arr low:(int)low up:(int)up{
     if (low<up) {
-        int mid = [Sorts partitionAnotherWay:arr low:low up:up];
+//        int mid = [Sorts partitionAnotherWay:arr low:low up:up];
+        int mid = [Sorts partitionDesc:arr low:low up:up];
         [Sorts startSort:arr low:0 up:mid];
         [Sorts startSort:arr low:mid+1 up:up];
     }
@@ -57,10 +58,30 @@
         int j = [[arr objectAtIndex:up-1] intValue];
         if (j<pivot) {
             [arr exchangeObjectAtIndex:mid withObjectAtIndex:up-1];
-            
         }
         mid++;
 
+    }
+    return mid;
+}
+
++ (int)partitionDesc:(NSMutableArray *)arr low:(int)low up:(int)up{
+    int mid = low;
+    int pivot = [[arr objectAtIndex:up-1] intValue];
+    
+    while (mid<up-1) {
+        int i = [[arr objectAtIndex:mid] intValue];
+        
+        if (i<pivot) {
+            [arr exchangeObjectAtIndex:mid withObjectAtIndex:up-1];
+            up--;
+        }
+        int j = [[arr objectAtIndex:up-1] intValue];
+        if (j>pivot) {
+            [arr exchangeObjectAtIndex:mid withObjectAtIndex:up-1];
+        }
+        mid++;
+        
     }
     return mid;
 }
