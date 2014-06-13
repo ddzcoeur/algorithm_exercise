@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Utility.h"
 #import "Chess.h"
-
+#import "Sorts.h"
 
 
 int main(int argc, const char * argv[])
@@ -28,6 +28,11 @@ int main(int argc, const char * argv[])
         NSString *f_str = [Utility rotationArrayWithRotaionPosition:rotation string:str];
         NSLog(@"final str:%@",f_str);
         [Chess chess];
+        
+        
+        NSArray *sort_arr = @[@"1",@"10",@"6",@"7",@"4",@"8",@"9",@"10",@"1",@"10",@"6",@"7",@"4",@"8",@"9",@"10"];
+        NSArray *arr_after_sort = [Sorts quickSortWithArray:sort_arr];
+        NSLog(@"q_sort: %@",arr_after_sort);
     }
     return 0;
 }
