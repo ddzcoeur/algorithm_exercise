@@ -11,13 +11,9 @@
 @implementation NSString (Pure)
 
 - (BOOL)isPureInt{
-    
     NSScanner* scan = [NSScanner scannerWithString:self];
-    
     int val;
-    
     return[scan scanInt:&val] && [scan isAtEnd];
-    
 }
 
 @end
